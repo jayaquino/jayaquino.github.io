@@ -1,1 +1,107 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chattern Chinese</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div>
+        <h1>
+            Chatter Chinese
+        </h1>
+        <img id="profilePhoto" src="mask_self.jpeg">
+    </div>
+
+    <div>
+        <img class = "menu" src="line.3.horizontal@2x.png" alt="">
+    </div>
+
+    <div class = "content">
+        <h3>
+            Mandarin Learning
+        </h3>
+
+        <nav>
+            <img class = "close" id= "exitMark" src="xmark.circle@2x.png" alt="">
+            <ul>
+                <li class = "chatterChinese">
+                        chatter chinese
+                </li>
+                <li>
+                        bopomofo studio
+                </li>
+                <li class = "aboutMe">
+                        about me
+                </li>
+            </ul>
+        </nav>
+
+        <p class = "descriptionAboutMe">
+            I was born in the Philippines, at a town called Taal. 
+            I lived there for about 8 years before moving to Reno, NV in USA. My parents wanted to pursue a better life for their kids. To be quite frank with you, I can't remember much
+            of that past besides my mother-tongue. I went to school in Reno until I graduated college. Obtained my US citizenship at 17, and attended University of Nevada, Reno,
+            majoring in Mechanical Engineering, emphasizing robotics coursework with a minor in Electrical Engineering.
+
+            <br><br>
+
+            Why? To be honest, I'm not sure. I felt I just took that path because of others' expectations, or because it was a white-collar job my parents could 
+            be proud of. I personally didn't question it at the beginning. 
+
+            <br><br>
+
+            I was calculating mathematical equations trying to figure out how objects moved, and at the same time figuring out why things shouldn't move. I took up apprenticeships
+            from professors to learn more about the mechanical world, but the experiments and work proved to be dry to my taste. Then
+            I attended a class called Introduction to Numerical Methods. This was the first time I even heard of the word programming. It fascinated me enough
+            that when I got good at programming "for Mechanicals", I decided to get a job at the university to help the professor teach underclassmen. Loved it so much
+            I kept the position for 2 years.
+
+            <br><br>
+
+            Throughout my junior year I thought, "did I get into the wrong major"? Fast forward to the summer of my senior year I was having second thoughts but I couldn't turn back then, it's too expensive.
+            I have to help my parents with our financial situation. I need to graduate. And that's what I did. I graduated, obtained by first job as a Mechanical Engineer. 
+            This job led me to come to a beautiful place called Taiwan.
+
+            <br><br>
+
+            I spent 2 or so years in this position, designing radiofrequency medical devices, experimenting, and communicating with clients/customers. Guess what? I was still itching
+            to program. I learned some Python and applied it to my work to do repetitive tasks in the meantime, for example scraping experiment documents and creating reports. In my off time
+            I was trying to learn Chinese, eventually finding my passion for languages and communication. Eventually, I knew I needed to pursue this itch because it was what I kept thinking about. I thought,
+            "what if this, what if that?" and not sure if I took things for granted, but I know for sure I wouldn't find out if I continued the way I was.
+            At the moment I'm trying to combine these two in my life. This is what produced the roughly coded Bopomofo Studio and Chatter Chinese. And this website. 
+        </p>
+
+    </div>
+
+    <script>
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+        const chatterChinese = document.querySelector(".chatterChinese")
+        const aboutMe = document.querySelector(".aboutMe")
+        const nav = document.querySelector('nav')
+        const aboutMeDescription = document.querySelector('.descriptionAboutMe')
+
+        menu.addEventListener('click', () => {
+            nav.classList.add('open-nav')
+        })
+
+        close.addEventListener('click', () => {
+            nav.classList.remove('open-nav')
+        })
+
+        aboutMe.addEventListener('click', () => {
+            aboutMeDescription.classList.add('show')
+            nav.classList.remove('open-nav')
+        })
+
+
+    
+    </script>
+
+</body>
+
+</html>
