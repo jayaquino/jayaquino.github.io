@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chattern Chinese</title>
+    <title>Nelson Aquino Jr.</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
     <div>
         <h1>
-            Chatter Chinese
+            Nelson Aquino Jr.
         </h1>
         <img id="profilePhoto" src="mask_self.jpeg">
     </div>
@@ -23,23 +23,38 @@
 
     <div class = "content">
         <h3>
-            Mandarin Learning
+            Personal Portfolio
         </h3>
-
+        
         <nav>
             <img class = "close" id= "exitMark" src="xmark.circle@2x.png" alt="">
             <ul>
+                <li class = "aboutMe">
+                    about me
+            </li>
                 <li class = "chatterChinese">
                         chatter chinese
                 </li>
-                <li>
+                <li class = "bopomofoStudio">
                         bopomofo studio
-                </li>
-                <li class = "aboutMe">
-                        about me
                 </li>
             </ul>
         </nav>
+
+        <p class = "descriptionChatterChinese">
+            Chatter Chinese is my most recent project. My inspiration for this application is because, as a typical introvert, it was
+            difficult for me to find language exchange partners. To put what I learned into practice and to produce a solution to my personal problem,
+            I created this app. Essentially, it's a social app. Features are shown below:
+            <br><br>
+        </p>
+
+        <p class = "descriptionBopomofoStudio">
+            Bopomofo is a Mandarin Chinese learning app. The most popular way to learn Mandarin is through a romanization system called
+            Hanyu Pinyin 漢語拼音. Another system that is less popular is called Zhuyin 注音符號 - Bopomofo. I personally believe that Pinyin is more prone to
+            pronunciation errors, and after learning BPMF I soon realized my shortcomings. This application teaches its students the characters and sounds of Zhuyin,
+            and also teaches students how to type Chinese Characters using an iPhone Zhuyin style keyboard. Features are shown below:
+            <br><br>
+        </p>
 
         <p class = "descriptionAboutMe">
             I was born in the Philippines, at a town called Taal. 
@@ -80,9 +95,13 @@
     <script>
         const menu = document.querySelector('.menu')
         const close = document.querySelector('.close')
-        const chatterChinese = document.querySelector(".chatterChinese")
+        const chatterChinese = document.querySelector('.chatterChinese')
+        const bopomofoStudio = document.querySelector('.bopomofoStudio')
         const aboutMe = document.querySelector(".aboutMe")
         const nav = document.querySelector('nav')
+
+        const chatterChineseDescription = document.querySelector('.descriptionChatterChinese')
+        const bopomofoStudioDescription = document.querySelector('.descriptionBopomofoStudio')
         const aboutMeDescription = document.querySelector('.descriptionAboutMe')
 
         menu.addEventListener('click', () => {
@@ -93,11 +112,30 @@
             nav.classList.remove('open-nav')
         })
 
+        chatterChinese.addEventListener('click', () =>{
+            chatterChineseDescription.classList.add('show')
+            bopomofoStudioDescription.classList.remove('show')
+            aboutMeDescription.classList.remove('show')
+            nav.classList.remove('open-nav')
+        })
+
+        bopomofoStudio.addEventListener('click', () =>{
+            chatterChineseDescription.classList.remove('show')
+            bopomofoStudioDescription.classList.add('show')
+            aboutMeDescription.classList.remove('show')
+            nav.classList.remove('open-nav')
+        })
+
         aboutMe.addEventListener('click', () => {
+            chatterChineseDescription.classList.remove('show')
+            bopomofoStudioDescription.classList.remove('show')
             aboutMeDescription.classList.add('show')
             nav.classList.remove('open-nav')
         })
 
+
+
+        
 
     
     </script>

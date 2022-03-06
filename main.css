@@ -9,13 +9,20 @@ body {
 
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 3em;
-    color: #2F5D62
-    
+    font-size: 1.5em;
+    width: 30%;
+    color: #2F5D62;
+    position:fixed;
+    left: 20px;
+    background: white;
+    border-radius: 25vh;
+    background-position: center;
+    z-index: 10;
+
 }
 
 p {
-    display: none;;
+    display: none;
     text-align: justify;
 }
 
@@ -34,6 +41,7 @@ p {
     padding: 20px
 }
 
+  
 img#profilePhoto {
     display: block;
     margin-left: auto;
@@ -43,6 +51,7 @@ img#profilePhoto {
     animation: introLoad 2s;
     padding: 3em;
 }
+
 
 .close {
 
@@ -72,10 +81,17 @@ ul {
 
 li {
     padding: 10px;
+    background: url('blob.svg');
+    background-position: left;
+    background-size: 20%;
+    background-repeat: no-repeat
 }
 
-a:hover {
-    background: gray
+li:hover {
+    background: url('blob white.svg');
+    background-position: center;
+    background-size: 230%;
+    background-repeat: no-repeat
 }
 
 .open-nav {
@@ -112,6 +128,8 @@ a {
     li {
         margin: 3em;
         flex: 1;
+        background-size: 230%;
+        background-position: center;
     }
 
 }
