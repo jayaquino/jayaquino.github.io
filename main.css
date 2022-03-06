@@ -1,0 +1,126 @@
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    background-color: #DFEEEA;
+    font-family: 'Chalkboard SE', serif;
+    text-align: center
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: #2F5D62
+    
+}
+
+p {
+    display: none;;
+    text-align: justify;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 20px
+}
+
+img#profilePhoto {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    border-radius: 50%;
+    animation: introLoad 2s;
+    padding: 3em;
+}
+
+.close {
+
+    float: right;
+    margin: 2em;
+    width: 2em;
+}
+
+nav {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background: white;
+    height: 100vh;
+    width: 25vh;
+    text-transform: uppercase;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    margin-top:6em;
+    margin-bottom: 6em;
+}
+
+li {
+    padding: 10px;
+}
+
+a:hover {
+    background: gray
+}
+
+.open-nav {
+    transform: translateX(0);
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width:600px) {
+    nav {
+        transform: translateX(0);
+        display:inline-block;
+        width: 100%;
+        position: unset;
+        background: none;
+        height: 30%;
+    }
+
+    .close {
+        display: none
+    }
+
+    .menu {
+        display: none
+    }
+
+
+    ul {
+        display: flex;
+    }
+
+    li {
+        margin: 3em;
+        flex: 1;
+    }
+
+}
+
+@keyframes introLoad {
+    from {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 73% 24%);
+    }
+    to {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
