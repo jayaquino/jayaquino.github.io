@@ -173,6 +173,16 @@ a {
         background-position: center;
     }
 
+    
+
+}
+
+@media (min-width:900px) {
+    .flex-details {
+        display: flex;
+        margin-left:30%;
+        margin-right: 30%
+    }
 }
 
 @keyframes introLoad {
