@@ -48,29 +48,26 @@
                 difficult for me to find language exchange partners. To put what I learned into practice and to produce
                 a solution to my personal problem,
                 I created this app. Essentially, it's a social app. Features are shown below:
-                
+
             </p>
-
+            <img src="cc.png" alt="">
             <div>
-               <h3>
-                   The Login Page
-               </h3>
-               <h4>
-                   Purpose: The purpose of this page is to check if the user currently exists or to direct the user to register to access the application.
-               </h4>
-               <div class="flex-details">
+                <h3>
+                    The Login Page
+                </h3>
+                <h4>
+                    Purpose: The purpose of this page is to check if the user currently exists or to direct the user to
+                    register to access the application.
+                </h4>
+                <div class="flex-details">
 
-                <div class="flex-child">
-                    Uses UIKit Textfields and Buttons, connected to Firebase Authentication to sign in users.
-                    <br><br>
-                    Uses CoreLocation to store location variables into a singleton. 
+                   
+
+                    <div class="flex-child">
+                        <img src="loginPage.jpeg" alt="" style="width:50%;">
+                    </div>
+
                 </div>
-                
-                <div class="flex-child">
-                    <img src="loginPage.jpeg" alt="">
-                </div>
-                
-              </div>
             </div>
 
             <div>
@@ -78,62 +75,140 @@
                     The Registration Page
                 </h3>
                 <h4>
-                    Purpose: The purpose of this page is to send user data to the Firebase Database to be accessed later in the app.
+                    Purpose: The purpose of this page is to send user data to the Firebase Database to be accessed later
+                    in the app.
 
 
                 </h4>
                 <div class="flex-details">
- 
-                 <div class="flex-child">
-                    <img src="registerPage.jpeg" alt="">
-                 </div>
-                 
-                 <div class="flex-child">
-                    UITextfields and a simple UIPicker using data source and delegate methods                    Data is organized into a Message (Model), translated into a MessageCell Nib (View) to be called into the UITableView. The Nib is modified depending if the user is the sender or receiver.
-                  <br><br>
-                    UIAlertController and Actions are used to inform users about requirements of textfields. 
-                  <br><br>
-                    Use Firebase Database to store user details.
+
+                    <div class="flex-child">
+                        <img src="registerPage.jpeg" alt="">
+                    </div>
+
+                    <div class="flex-child">
+                        <img src="registrationError.jpeg" alt="">
+
+                    </div>
 
                 </div>
-                 
-               </div>
-             </div>
 
-             <div>
+                <div class="flex-child-detail">
+                    <em>UITextFields and UIPicker</em><br>
+                    Used to display information and select information to send to the database.
+                    <br><br>
+                    <em>UIAlertController and Actions</em><br>
+                    Used to inform users about requirements of textfields.
+                    <br><br>
+                    <em>Firebase Database</em><br>
+                    To store user details.
+                </div>
+
+
+            </div>
+
+
+            <div>
                 <h3>
                     The Chat Page
                 </h3>
                 <h4>
-                    The purpose of this page is to allow users (English Speakers & Chinese Speakers) to interact with each other. The message is sent to a database to be stored, loaded, and if the user wants, use the Translation MLKit to translate the message to the other language. The data uses the user's location to decide what data to show.
+                    The purpose of this page is to allow users (English Speakers & Chinese Speakers) to interact with
+                    each
+                    other. The message is sent to a database to be stored, loaded, and if the user wants, use the
+                    Translation
+                    MLKit to translate the message to the other language. The data uses the user's location to decide
+                    what data
+                    to show.
 
                 </h4>
                 <div class="flex-details">
- 
-                 <div class="flex-child">
-                    <img src="registerPage.jpeg" alt="">
-                 </div>
-                 
-                 <div class="flex-child">
-                    <em>Firebase Database</em> <br><br>
-                    Uses UITableView DataSource and Delegate to access Firebase Database (Model) and get data.
-                    Data is organized into a Message (Model), translated into a MessageCell Nib (View) to be called into the UITableView. The Nib is modified depending if the user is the sender or receiver.
-                 </div>
-                 
-               </div>
-             </div>
 
-             <div class="flex-child" >
-                <em>Cocoapods</em> <br><br>
+                    <div class="flex-child">
+                        <img src="englishToChinese.jpeg" alt="">
+                    </div>
+
+                    <div class="flex-child">
+                        <img src="chineseToEnglish.jpeg" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex-child-detail">
+                <em>Firebase Database</em> <br>
+                Uses UITableView DataSource and Delegate to access Firebase Database (Model) and get data.
+                Data is organized into a Message (Model), translated into a MessageCell Nib (View) to be called into the
+                UITableView. The Nib is modified depending if the user is the sender or receiver.
+                <br><br>
+                <em>Cocoapods</em> <br>
                 IQKeyboardManagerSwift: Used to allow the keyboard to appear below the presented view.
                 <br><br>
                 Popover: Used to show the user the translated "bubble" popover.
                 <br><br>
                 K3Pinyin: Used to translate Chinese characters to Romanized pinyin.
                 <br><br>
-             </div>
+                Future Implementation: Core Data to store translated messages if the user decides to study later.
+                <br><br>
+            </div>
 
-            
+            <div>
+                <h3>
+                    The Post Page
+                </h3>
+                <h4>
+                    The purpose of this page is to allow users to express any thoughts. Data is created by a Model and stored in the Database as a separate collection to load.
+
+                </h4>
+                <div class="flex-details">
+
+                    <div class="flex-child">
+                        <img src="postPage.PNG" alt="">
+                    </div>
+
+                    <div class="flex-child">
+                        <img src="postDetailPage.PNG" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex-child-detail">
+                <em>Add Post View Controller</em> <br>
+                The UIBarButton sends user to a modal view controller to write a post.
+                The table view shows a number of votes that signifies if the post is quite interesting or not.
+                <br><br>
+                <em>Post Details View Controller</em> <br>
+                Users are allowed to tap on the table view cell to see its contents by using delegate methods.
+                The user is allowed to delete if it is his/her post. Each account can upvote or downvote once.
+                <br><br>
+            </div>
+
+            <div>
+                <h3>
+                    The Cafe Page
+                </h3>
+                <h4>
+                    The purpose of this page is to allow users to express any thoughts. Data is created by a Model and stored in the Database as a separate collection to load.
+                </h4>
+                <div class="flex-details">
+
+                    <div class="flex-child">
+                        <img src="cafePage.PNG" alt="">
+                    </div>
+
+                    <div class="flex-child">
+                        <img src="cafeAvailability.PNG" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex-child-detail">
+                <em>UIAlertController and Actions</em> <br>
+                Used to alert the user when pressed. Will store data once again to the database.
+                <br><br>
+            </div>
 
         </section>
 
@@ -149,10 +224,66 @@
                 are shown below:
                 <br><br>
             </p>
+
+            <img src="bpmf.png" alt="">
+
+            <div>
+                <h3>
+                    Zhuyin
+                </h3>
+                <h4>
+                    The purpose of this section is to teach students how to pronounce Zhuyin characters play
+                    a small typing game.
+                </h4>
+                <div class="flex-details">
+
+                    <div class="flex-child">
+                        <img src="bpmfSettings.PNG" alt="">
+                    </div>
+
+                    <div class="flex-child">
+                        <img src="bpmfPreview.PNG" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex-child-detail">
+                <em>SwiftUI</em> <br>
+                The application was created using SwiftUI. Wrapped properties such as State, Binding, and Published were used in the app.
+                <br><br>
+
+                <em>Cocoapods</em> <br>
+                During this time I dabbled into Cocoapods before learning more about Xcode and Swift and before building Chatter Chinese. The code implements
+                the GoogleMobileAds SDK, and displays banner ads.
+                <br><br>
+            </div>
+
+            <div>
+                <h3>
+                    Vocabulary
+                </h3>
+                <h4>
+                    The purpose of this section is to practice typing Chinese words using Zhuyin characters.
+                    The section is separated into topics
+                </h4>
+                <div class="flex-details">
+
+                    <div class="flex-child">
+                        <img src="bpmfVocabSelection.PNG" alt="">
+                    </div>
+
+                    <div class="flex-child">
+                        <img src="bpmfVocabTest.jpeg" alt="">
+                    </div>
+
+                </div>
+            </div>
         </section>
 
         <section class="descriptionAboutMe">
             <p>
+                <strong><em>Early Life to Now</em></strong><br>
                 I was born in the Philippines, at a town called Taal.
                 I lived there for about 8 years before moving to Reno, NV in USA. My parents wanted to pursue a better
                 life for their kids. To be quite frank with you, I can't remember much
@@ -169,6 +300,7 @@
 
                 <br><br>
 
+                <strong><em>University</em></strong><br>
                 I was calculating mathematical equations trying to figure out how objects moved, and at the same time
                 figuring out why things shouldn't move. I took up apprenticeships
                 from professors to learn more about the mechanical world, but the experiments and work proved to be dry
@@ -189,6 +321,7 @@
 
                 <br><br>
 
+                <strong><em>Project Engineer in US Branch/Working in Taiwan</em></strong><br>
                 I spent 2 or so years in this position, designing radiofrequency medical devices, experimenting, and
                 communicating with clients/customers. Guess what? I was still itching
                 to program. I learned some Python and applied it to my work to do repetitive tasks in the meantime, for
@@ -199,7 +332,19 @@
                 find out if I continued the way I was.
                 At the moment I'm trying to combine these two in my life. This is what produced the roughly coded
                 Bopomofo Studio and Chatter Chinese. And this website.
+            
+                <br><br>
+               <strong><em>Fun Facts</em><br></strong>
+                <br>
+                One of favorite hobbies is dancing (currently learning Jazz Swing; Lindy Hop).
+                I also recently taken a liking into riding! I have a small 125CC Sym Wolf in Taiwan, and 
+                a slightly bigger Yamaha MT03 back home in the US.
+                <br><br>
+                <img src="reno_bike.jpeg" alt="">
+            
             </p>
+
+    
         </section>
     </div>
 
