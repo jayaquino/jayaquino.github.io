@@ -18,78 +18,189 @@
     </div>
 
     <div>
-        <img class = "menu" src="line.3.horizontal@2x.png" alt="">
+        <img class="menu" src="line.3.horizontal@2x.png" alt="">
     </div>
 
-    <div class = "content">
+    <div class="content">
         <h3>
             Personal Portfolio
         </h3>
-        
+
         <nav>
-            <img class = "close" id= "exitMark" src="xmark.circle@2x.png" alt="">
+            <img class="close" id="exitMark" src="xmark.circle@2x.png" alt="">
             <ul>
-                <li class = "aboutMe">
-                    about me
-            </li>
-                <li class = "chatterChinese">
-                        chatter chinese
+                <li class="chatterChinese">
+                    chatter chinese
                 </li>
-                <li class = "bopomofoStudio">
-                        bopomofo studio
+                <li class="bopomofoStudio">
+                    bopomofo studio
+                </li>
+                <li class="aboutMe">
+                    about me
                 </li>
             </ul>
         </nav>
 
-        <p class = "descriptionChatterChinese">
-            Chatter Chinese is my most recent project. My inspiration for this application is because, as a typical introvert, it was
-            difficult for me to find language exchange partners. To put what I learned into practice and to produce a solution to my personal problem,
-            I created this app. Essentially, it's a social app. Features are shown below:
-            <br><br>
-        </p>
+        <section class="descriptionChatterChinese">
+            <p>
+                Chatter Chinese is my most recent project. My inspiration for this application is because, as a typical
+                introvert, it was
+                difficult for me to find language exchange partners. To put what I learned into practice and to produce
+                a solution to my personal problem,
+                I created this app. Essentially, it's a social app. Features are shown below:
+                
+            </p>
 
-        <p class = "descriptionBopomofoStudio">
-            Bopomofo is a Mandarin Chinese learning app. The most popular way to learn Mandarin is through a romanization system called
-            Hanyu Pinyin 漢語拼音. Another system that is less popular is called Zhuyin 注音符號 - Bopomofo. I personally believe that Pinyin is more prone to
-            pronunciation errors, and after learning BPMF I soon realized my shortcomings. This application teaches its students the characters and sounds of Zhuyin,
-            and also teaches students how to type Chinese Characters using an iPhone Zhuyin style keyboard. Features are shown below:
-            <br><br>
-        </p>
+            <div>
+               <h3>
+                   The Login Page
+               </h3>
+               <h4>
+                   Purpose: The purpose of this page is to check if the user currently exists or to direct the user to register to access the application.
+               </h4>
+               <div class="flex-details">
 
-        <p class = "descriptionAboutMe">
-            I was born in the Philippines, at a town called Taal. 
-            I lived there for about 8 years before moving to Reno, NV in USA. My parents wanted to pursue a better life for their kids. To be quite frank with you, I can't remember much
-            of that past besides my mother-tongue. I went to school in Reno until I graduated college. Obtained my US citizenship at 17, and attended University of Nevada, Reno,
-            majoring in Mechanical Engineering, emphasizing robotics coursework with a minor in Electrical Engineering.
+                <div class="flex-child">
+                    Uses UIKit Textfields and Buttons, connected to Firebase Authentication to sign in users.
+                    <br><br>
+                    Uses CoreLocation to store location variables into a singleton. 
+                </div>
+                
+                <div class="flex-child">
+                    <img src="loginPage.jpeg" alt="">
+                </div>
+                
+              </div>
+            </div>
 
-            <br><br>
+            <div>
+                <h3>
+                    The Registration Page
+                </h3>
+                <h4>
+                    Purpose: The purpose of this page is to send user data to the Firebase Database to be accessed later in the app.
 
-            Why? To be honest, I'm not sure. I felt I just took that path because of others' expectations, or because it was a white-collar job my parents could 
-            be proud of. I personally didn't question it at the beginning. 
 
-            <br><br>
+                </h4>
+                <div class="flex-details">
+ 
+                 <div class="flex-child">
+                    <img src="registerPage.jpeg" alt="">
+                 </div>
+                 
+                 <div class="flex-child">
+                    UITextfields and a simple UIPicker using data source and delegate methods                    Data is organized into a Message (Model), translated into a MessageCell Nib (View) to be called into the UITableView. The Nib is modified depending if the user is the sender or receiver.
+                  <br><br>
+                    UIAlertController and Actions are used to inform users about requirements of textfields. 
+                  <br><br>
+                    Use Firebase Database to store user details.
 
-            I was calculating mathematical equations trying to figure out how objects moved, and at the same time figuring out why things shouldn't move. I took up apprenticeships
-            from professors to learn more about the mechanical world, but the experiments and work proved to be dry to my taste. Then
-            I attended a class called Introduction to Numerical Methods. This was the first time I even heard of the word programming. It fascinated me enough
-            that when I got good at programming "for Mechanicals", I decided to get a job at the university to help the professor teach underclassmen. Loved it so much
-            I kept the position for 2 years.
+                </div>
+                 
+               </div>
+             </div>
 
-            <br><br>
+             <div>
+                <h3>
+                    The Chat Page
+                </h3>
+                <h4>
+                    The purpose of this page is to allow users (English Speakers & Chinese Speakers) to interact with each other. The message is sent to a database to be stored, loaded, and if the user wants, use the Translation MLKit to translate the message to the other language. The data uses the user's location to decide what data to show.
 
-            Throughout my junior year I thought, "did I get into the wrong major"? Fast forward to the summer of my senior year I was having second thoughts but I couldn't turn back then, it's too expensive.
-            I have to help my parents with our financial situation. I need to graduate. And that's what I did. I graduated, obtained by first job as a Mechanical Engineer. 
-            This job led me to come to a beautiful place called Taiwan.
+                </h4>
+                <div class="flex-details">
+ 
+                 <div class="flex-child">
+                    <img src="registerPage.jpeg" alt="">
+                 </div>
+                 
+                 <div class="flex-child">
+                    <em>Firebase Database</em> <br><br>
+                    Uses UITableView DataSource and Delegate to access Firebase Database (Model) and get data.
+                    Data is organized into a Message (Model), translated into a MessageCell Nib (View) to be called into the UITableView. The Nib is modified depending if the user is the sender or receiver.
+                 </div>
+                 
+               </div>
+             </div>
 
-            <br><br>
+             <div class="flex-child" >
+                <em>Cocoapods</em> <br><br>
+                IQKeyboardManagerSwift: Used to allow the keyboard to appear below the presented view.
+                <br><br>
+                Popover: Used to show the user the translated "bubble" popover.
+                <br><br>
+                K3Pinyin: Used to translate Chinese characters to Romanized pinyin.
+                <br><br>
+             </div>
 
-            I spent 2 or so years in this position, designing radiofrequency medical devices, experimenting, and communicating with clients/customers. Guess what? I was still itching
-            to program. I learned some Python and applied it to my work to do repetitive tasks in the meantime, for example scraping experiment documents and creating reports. In my off time
-            I was trying to learn Chinese, eventually finding my passion for languages and communication. Eventually, I knew I needed to pursue this itch because it was what I kept thinking about. I thought,
-            "what if this, what if that?" and not sure if I took things for granted, but I know for sure I wouldn't find out if I continued the way I was.
-            At the moment I'm trying to combine these two in my life. This is what produced the roughly coded Bopomofo Studio and Chatter Chinese. And this website. 
-        </p>
+            
 
+        </section>
+
+        <section class="descriptionBopomofoStudio">
+            <p>
+                Bopomofo is a Mandarin Chinese learning app. The most popular way to learn Mandarin is through a
+                romanization system called
+                Hanyu Pinyin 漢語拼音. Another system that is less popular is called Zhuyin 注音符號 - Bopomofo. I personally
+                believe that Pinyin is more prone to
+                pronunciation errors, and after learning BPMF I soon realized my shortcomings. This application teaches
+                its students the characters and sounds of Zhuyin,
+                and also teaches students how to type Chinese Characters using an iPhone Zhuyin style keyboard. Features
+                are shown below:
+                <br><br>
+            </p>
+        </section>
+
+        <section class="descriptionAboutMe">
+            <p>
+                I was born in the Philippines, at a town called Taal.
+                I lived there for about 8 years before moving to Reno, NV in USA. My parents wanted to pursue a better
+                life for their kids. To be quite frank with you, I can't remember much
+                of that past besides my mother-tongue. I went to school in Reno until I graduated college. Obtained my
+                US citizenship at 17, and attended University of Nevada, Reno,
+                majoring in Mechanical Engineering, emphasizing robotics coursework with a minor in Electrical
+                Engineering.
+
+                <br><br>
+
+                Why? To be honest, I'm not sure. I felt I just took that path because of others' expectations, or
+                because it was a white-collar job my parents could
+                be proud of. I personally didn't question it at the beginning.
+
+                <br><br>
+
+                I was calculating mathematical equations trying to figure out how objects moved, and at the same time
+                figuring out why things shouldn't move. I took up apprenticeships
+                from professors to learn more about the mechanical world, but the experiments and work proved to be dry
+                to my taste. Then
+                I attended a class called Introduction to Numerical Methods. This was the first time I even heard of the
+                word programming. It fascinated me enough
+                that when I got good at programming "for Mechanicals", I decided to get a job at the university to help
+                the professor teach underclassmen. Loved it so much
+                I kept the position for 2 years.
+
+                <br><br>
+
+                Throughout my junior year I thought, "did I get into the wrong major"? Fast forward to the summer of my
+                senior year I was having second thoughts but I couldn't turn back then, it's too expensive.
+                I have to help my parents with our financial situation. I need to graduate. And that's what I did. I
+                graduated, obtained by first job as a Mechanical Engineer.
+                This job led me to come to a beautiful place called Taiwan.
+
+                <br><br>
+
+                I spent 2 or so years in this position, designing radiofrequency medical devices, experimenting, and
+                communicating with clients/customers. Guess what? I was still itching
+                to program. I learned some Python and applied it to my work to do repetitive tasks in the meantime, for
+                example scraping experiment documents and creating reports. In my off time
+                I was trying to learn Chinese, eventually finding my passion for languages and communication.
+                Eventually, I knew I needed to pursue this itch because it was what I kept thinking about. I thought,
+                "what if this, what if that?" and not sure if I took things for granted, but I know for sure I wouldn't
+                find out if I continued the way I was.
+                At the moment I'm trying to combine these two in my life. This is what produced the roughly coded
+                Bopomofo Studio and Chatter Chinese. And this website.
+            </p>
+        </section>
     </div>
 
     <script>
@@ -112,14 +223,14 @@
             nav.classList.remove('open-nav')
         })
 
-        chatterChinese.addEventListener('click', () =>{
+        chatterChinese.addEventListener('click', () => {
             chatterChineseDescription.classList.add('show')
             bopomofoStudioDescription.classList.remove('show')
             aboutMeDescription.classList.remove('show')
             nav.classList.remove('open-nav')
         })
 
-        bopomofoStudio.addEventListener('click', () =>{
+        bopomofoStudio.addEventListener('click', () => {
             chatterChineseDescription.classList.remove('show')
             bopomofoStudioDescription.classList.add('show')
             aboutMeDescription.classList.remove('show')
@@ -135,9 +246,9 @@
 
 
 
-        
 
-    
+
+
     </script>
 
 </body>
