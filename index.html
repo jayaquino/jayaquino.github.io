@@ -60,13 +60,28 @@
                     register to access the application.
                 </h4>
                 <div class="flex-details">
-
-                   
-
                     <div class="flex-child">
                         <img src="loginPage.jpeg" alt="" style="width:50%;">
                     </div>
 
+                </div>
+                <div class="flex-child-detail">
+                    <em>Firebase Authentication</em><br>
+                    Use Firebase Authentication to register the user. A FirebaseManager model is created to handle Firebase calls.
+                    <br><br>
+                    <em>CoreLocation</em><br>
+                    Location permission is asked and obtained from the user to user later in the app.
+                    <br><br>
+                    <em>Fundamentals: UIKit, Segue, Optional Handling</em><br>
+                    Used UIKit (Textfields and buttons) to build the page. The pages in the app are constrained to fit landscape and portrait mode.
+                    The interface colors are chosen to be functional in dark or light mode.
+                    <br><br>
+                    If the user is registered, the user is directed to the Chat page. If the user is partially registered, they are directed to complete 
+                    registration. If the user is not registered, they are directed to registration.
+                    <br><br>
+                    Optionals are checked (possibility of nil in textfields) using an if let statement.
+                    <br><br>
+                    The location is stored as a singleton to be accessed in various view controllers.
                 </div>
             </div>
 
@@ -77,9 +92,8 @@
                 <h4>
                     Purpose: The purpose of this page is to send user data to the Firebase Database to be accessed later
                     in the app.
-
-
                 </h4>
+
                 <div class="flex-details">
 
                     <div class="flex-child">
@@ -95,13 +109,13 @@
 
                 <div class="flex-child-detail">
                     <em>UITextFields and UIPicker</em><br>
-                    Used to display information and select information to send to the database.
+                    Used to display information and select information to send to the database. A simple UIPicker Datasource and Delegate is implemented.
                     <br><br>
                     <em>UIAlertController and Actions</em><br>
                     Used to inform users about requirements of textfields.
                     <br><br>
                     <em>Firebase Database</em><br>
-                    To store user details.
+                    To store user details that are given in this registration page.
                 </div>
 
 
@@ -137,8 +151,8 @@
 
             <div class="flex-child-detail">
                 <em>Firebase Database</em> <br>
-                Uses UITableView DataSource and Delegate to access Firebase Database (Model) and get data.
-                Data is organized into a Message (Model), translated into a MessageCell Nib (View) to be called into the
+                Uses UITableView DataSource and Delegate to access the Firebase Database to write and read data.
+                Data is organized into a Message model, translated into a MessageCell Nib (View) to be called into the
                 UITableView. The Nib is modified depending if the user is the sender or receiver.
                 <br><br>
                 <em>Cocoapods</em> <br>
@@ -150,6 +164,11 @@
                 <br><br>
                 Future Implementation: Core Data to store translated messages if the user decides to study later.
                 <br><br>
+                <em>Other Features</em> <br>
+                UILongPressGestureRecognizer to implement a long press gesture. <br>
+                NLLanguageRecognizer used to analyze if the text is English or Chinese <br>
+                Escaping Closures to handle asynchronous calls. <br>
+                Which message to show to the user is dependent on the location obtained fore CoreLocation.
             </div>
 
             <div>
@@ -182,6 +201,14 @@
                 Users are allowed to tap on the table view cell to see its contents by using delegate methods.
                 The user is allowed to delete if it is his/her post. Each account can upvote or downvote once.
                 <br><br>
+                <em>Protocol Usage</em> <br>
+                Protocol is used to delete a post. The delegate of AddPostViewController is the PostDetailsViewController, and once PostViewController receives
+                the delete "message", it will delete the post from the UITableViewController and the Firebase Database.
+                <br>
+                A protocol is also used to add data from AddPostViewController.
+                <br><br>
+                <em>Other</em> <br>
+                Segue: Segue preparation is used to pass the data of the post from the PostViewController to PostDetailsViewController
             </div>
 
             <div>
