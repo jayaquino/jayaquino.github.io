@@ -48,7 +48,6 @@
                 difficult for me to find language exchange partners. To put what I learned into practice and to produce
                 a solution to my personal problem,
                 I created this app. Essentially, it's a social app. Features are shown below:
-
             </p>
             <img src="cc.png" alt="" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
             <div>
@@ -69,8 +68,12 @@
                     <em>Firebase Authentication</em><br>
                     Use Firebase Authentication to register the user. A FirebaseManager model is created to handle Firebase calls.
                     <br><br>
-                    <em>CoreLocation</em><br>
+                    <em>Core Location</em><br>
                     Location permission is asked and obtained from the user to user later in the app.
+                    <br><br>
+                    <em>Core Animation</em><br>
+                    Buttons are extended with animation functions. The animation used is a spring loaded animation
+                    while the user waits for Firebase Authentication.
                     <br><br>
                     <em>Fundamentals: UIKit, Segue, Optional Handling</em><br>
                     Used UIKit (Textfields and buttons) to build the page. The pages in the app are constrained to fit landscape and portrait mode.
@@ -153,11 +156,16 @@
                 <em>UITabBarController</em> <br>
                 After login, the user is transferred to a TabBarController, which is responsible for controlling the the multi-selection 
                 interface. The user can switch between the Chat, Post, or Cafe
-
+                <br><br>
                 <em>Firebase Database</em> <br>
                 Uses UITableView DataSource and Delegate to access the Firebase Database to write and read data.
                 Data is organized into a Message model, translated into a MessageCell Nib (View) to be called into the
                 UITableView. The Nib is modified depending if the user is the sender or receiver.
+                <br><br>
+                <em>Core Data</em> <br>
+                A slight implementation of Core Data is created. Using the context in the App Delegate,
+                the user is able to save the viewed Popover in a Sentence Core Data Model, having a 
+                title, the sentence, and its translation. The model is saved to be accessed in the Study section of the app.
                 <br><br>
                 <em>Cocoapods</em> <br>
                 IQKeyboardManagerSwift: Used to allow the keyboard to appear below the presented view.
@@ -172,7 +180,7 @@
                 UILongPressGestureRecognizer to implement a long press gesture. <br>
                 NLLanguageRecognizer used to analyze if the text is English or Chinese <br>
                 Escaping Closures to handle asynchronous calls. <br>
-                Which message to show to the user is dependent on the location obtained fore CoreLocation.
+                Which message to show to the user is dependent on the location obtained from CoreLocation.
             </div>
 
             <div>
@@ -239,6 +247,8 @@
                 <em>UIAlertController and Actions</em> <br>
                 Used to alert the user when pressed. Will store data once again to the database.
                 <br><br>
+                <em>Details</em> <br>
+                Users can access the details (location, address, arrival time, departure time) if the table view cell is tapped.
             </div>
 
         </section>
