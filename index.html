@@ -32,6 +32,9 @@
                 <li class="chatterChinese">
                     chatter chinese
                 </li>
+                <li class="languageBuddy">
+                    language buddy
+                </li>
                 <li class="bopomofoStudio">
                     bopomofo studio
                 </li>
@@ -253,6 +256,53 @@
 
         </section>
 
+        <section class="descriptionLanguageBuddy">
+            <p>
+                Language Buddy: Let's Study! is a social app (available in the app store) created with the intent of bringing people who study languages together. From personal experience, I often
+                find myself studying alone in a cafe. The app in theory, would help these people connect if they want to. It registers users that they are currently studying
+                a language and shows their public location. The location is displayed using MapKit, and the distance from other user's location is calculated. It only displays 
+                information to users that are whithin a specific distance from each other. Furthermore, each person that registers they're studying will has their own 
+                table view cell to a chat room. Long pressing this cell will open Maps to the user's location. The users can also use "anonymous" if they don't want to show their 
+                username.
+                <br><br>
+            </p>
+
+            <img src="/Language Buddy Assets/language_buddy_icon.png" alt="" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+
+            <div>
+                <h3>
+                    Zhuyin
+                </h3>
+                <h4>
+                    The purpose of this section is to teach students how to pronounce Zhuyin characters play
+                    a small typing game.
+                </h4>
+                <div class="flex-details">
+
+                    <div class="flex-child">
+                        <img src="/Language Buddy Assets/list of people studying.png" alt="">
+                    </div>
+
+                    <div class="flex-child">
+                        <img src="Language Buddy Assets/home.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex-child-detail">
+                <em>Firebase</em> <br>
+                Firebase Authenticate and Database is used to store user data.
+                <br><br>
+
+                <em>TableView, CoreLocation, MapKit, Alerts</em> <br>
+                Two table views are used (home and chat page) that uses custom table view cells. CoreLocation is integrated to obtain user's information. Logic such as listening to location changes and listening to permission changes are implemented.
+                Data from CoreLocation is passed to Firebase and utilized by MapKit to display pins on the map, and calculate distance from each user. Alert views are used in the authentication page, 
+                and setting availability page; the two pages that require user inputs.
+                <br><br>
+            </div>
+        </section>
+
         <section class="descriptionBopomofoStudio">
             <p>
                 Bopomofo is a Mandarin Chinese learning app. The most popular way to learn Mandarin is through a
@@ -393,11 +443,13 @@
         const menu = document.querySelector('.menu')
         const close = document.querySelector('.close')
         const chatterChinese = document.querySelector('.chatterChinese')
+        const languageBuddy = document.querySelector('.languageBuddy')
         const bopomofoStudio = document.querySelector('.bopomofoStudio')
         const aboutMe = document.querySelector(".aboutMe")
         const nav = document.querySelector('nav')
 
         const chatterChineseDescription = document.querySelector('.descriptionChatterChinese')
+        const languageBuddyDescription = document.querySelector('.descriptionLanguageBuddy')
         const bopomofoStudioDescription = document.querySelector('.descriptionBopomofoStudio')
         const aboutMeDescription = document.querySelector('.descriptionAboutMe')
 
@@ -411,6 +463,15 @@
 
         chatterChinese.addEventListener('click', () => {
             chatterChineseDescription.classList.add('show')
+            languageBuddyDescription.classList.remove('show')
+            bopomofoStudioDescription.classList.remove('show')
+            aboutMeDescription.classList.remove('show')
+            nav.classList.remove('open-nav')
+        })
+
+        languageBuddy.addEventListener('click', () => {
+            chatterChineseDescription.classList.remove('show')
+            languageBuddyDescription.classList.add('show')
             bopomofoStudioDescription.classList.remove('show')
             aboutMeDescription.classList.remove('show')
             nav.classList.remove('open-nav')
@@ -418,6 +479,7 @@
 
         bopomofoStudio.addEventListener('click', () => {
             chatterChineseDescription.classList.remove('show')
+            languageBuddyDescription.classList.remove('show')
             bopomofoStudioDescription.classList.add('show')
             aboutMeDescription.classList.remove('show')
             nav.classList.remove('open-nav')
@@ -425,10 +487,12 @@
 
         aboutMe.addEventListener('click', () => {
             chatterChineseDescription.classList.remove('show')
+            languageBuddyDescription.classList.remove('show')
             bopomofoStudioDescription.classList.remove('show')
             aboutMeDescription.classList.add('show')
             nav.classList.remove('open-nav')
         })
+
 
 
 
