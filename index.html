@@ -52,7 +52,7 @@
                 a solution to my personal problem,
                 I created this app. Essentially, it's a social app. Features are shown below:
             </p>
-            <img src="cc.png" alt="" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+            <img src="cc.png" alt="" style="display: block;margin-left: auto;margin-right: auto;width: 30%;">
             <div>
                 <h3>
                     The Login Page
@@ -226,34 +226,6 @@
                 Segue: Segue preparation is used to pass the data of the post from the PostViewController to PostDetailsViewController
             </div>
 
-            <div>
-                <h3>
-                    The Cafe Page
-                </h3>
-                <h4>
-                    The purpose of this page is to allow users to express any thoughts. Data is created by a Model and stored in the Database as a separate collection to load.
-                </h4>
-                <div class="flex-details">
-
-                    <div class="flex-child">
-                        <img src="cafePage.PNG" alt="">
-                    </div>
-
-                    <div class="flex-child">
-                        <img src="cafeAvailability.PNG" alt="">
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="flex-child-detail">
-                <em>UIAlertController and Actions</em> <br>
-                Used to alert the user when pressed. Will store data once again to the database.
-                <br><br>
-                <em>Details</em> <br>
-                Users can access the details (location, address, arrival time, departure time) if the table view cell is tapped.
-            </div>
-
         </section>
 
         <section class="descriptionLanguageBuddy">
@@ -267,39 +239,55 @@
                 <br><br>
             </p>
 
-            <img src="/Language Buddy Assets/language_buddy_icon.png" alt="" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+            <img src="/Language Buddy Assets/language_buddy_icon.png" alt="" style="display: block;margin-left: auto;margin-right: auto;width: 30%;">
+
+            <h3>
+                Home Screen & Preferences
+            </h3>
+            <h4>
+                The Home screen shows current users who set their current availability. Preferences show a basic layout to activate
+                anonymous mode, there is an ImageView to allow users to upload profile pictures. A button to delete the profile and remove it
+                from Firebase Authentication.
+            </h4>
 
             <div>
-                <h3>
-                    Zhuyin
-                </h3>
-                <h4>
-                    The purpose of this section is to teach students how to pronounce Zhuyin characters play
-                    a small typing game.
-                </h4>
                 <div class="flex-details">
 
                     <div class="flex-child">
-                        <img src="/Language Buddy Assets/list of people studying.png" alt="">
+                        <img src="/Language Buddy Assets/1.1/home screen.png" alt="">
                     </div>
 
                     <div class="flex-child">
-                        <img src="Language Buddy Assets/home.png" alt="">
+                        <img src="Language Buddy Assets/1.1/anonymous.png" alt="">
                     </div>
+
 
                 </div>
             </div>
 
             <div class="flex-child-detail">
                 <em>Firebase</em> <br>
-                Firebase Authenticate and Database is used to store user data.
+                Firebase Authenticate and Database is used to store user data. Firebase Storage is also used to store profile pictures.
+                Data cache is used to minimize Firebase calls and provide smoother user experience. Users can set themselves as anonymous
+                and logic is implemented to hide user-specific details when storing information in Firebase.
                 <br><br>
 
-                <em>TableView, CoreLocation, MapKit, Alerts</em> <br>
-                Two table views are used (home and chat page) that uses custom table view cells. CoreLocation is integrated to obtain user's information. Logic such as listening to location changes and listening to permission changes are implemented.
-                Data from CoreLocation is passed to Firebase and utilized by MapKit to display pins on the map, and calculate distance from each user. Alert views are used in the authentication page, 
-                and setting availability page; the two pages that require user inputs.
+                <em>TableView</em> <br>
+                Two table views are used (home and chat page) that uses custom table view cells. A Gesture Recognizer (long press) is implemented
+                on the table view. This action will open Apple Maps to the poster's location.
                 <br><br>
+                <em>CoreLocation</em> <br>
+                CoreLocation is integrated to obtain user's information. Logic such as listening to location changes and listening to permission changes are implemented.
+                Data from CoreLocation is passed to Firebase 
+                <br><br>
+                <em>MapKit</em> <br>
+                Location info stored in Firebase is utilized by MapKit to display pins on the map, and calculate distance from each user. 
+                <br><br>
+                <em>Alerts</em> <br>
+                Alert views are used in the authentication page, 
+                and setting availability page; the two pages that require user inputs. An alert is also presented if the user
+                wants to delete their profile.
+
             </div>
         </section>
 
@@ -316,7 +304,7 @@
                 <br><br>
             </p>
 
-            <img src="bpmf.png" alt="" style="display: block;margin-left: auto;margin-right: auto;width: 50%;">
+            <img src="bpmf.png" alt="" style="display: block;margin-left: auto;margin-right: auto;width: 30%;">
 
             <div>
                 <h3>
@@ -369,7 +357,19 @@
                     </div>
 
                 </div>
+
             </div>
+
+            <div class="flex-child-detail">
+                <em>UIPickerView</em> <br>
+                Picker views are implemented to allow users to select the vocabulary they would like to practice.
+                <br><br>
+
+                <em>NSUserDefaults</em> <br>
+                User Defaults data persistance is implemented for high scores. This is directly linked to the time limit the user picked in a settings menu.
+                <br><br>
+            </div>
+
         </section>
 
         <section class="descriptionAboutMe">

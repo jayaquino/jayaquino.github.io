@@ -12,7 +12,7 @@ h1 {
     font-size: 1.5em;
     width: 30%;
     color: #2F5D62;
-    position:fixed;
+    position:relative;
     left: 20px;
     background: white;
     border-radius: 25vh;
@@ -86,10 +86,7 @@ ul {
 
 li {
     padding: 10px;
-    background: url('blob.svg');
-    background-position: left;
-    background-size: 0%;
-    background-repeat: no-repeat
+
 }
 
 .flex-details {
@@ -121,10 +118,7 @@ li {
 } 
 
 li:hover {
-    background: url('blob white.svg');
-    background-position: center;
-    background-size: 230%;
-    background-repeat: no-repeat
+    font-size: 1.2em
 }
 
 .vertical-center {
